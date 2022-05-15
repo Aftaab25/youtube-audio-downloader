@@ -1,2 +1,2 @@
 # youtube-audio-downloader
-Download Songs, Podcasts and various other audio files from Youtube.
+Download Songs, Podcasts and other audio files from Youtube.
