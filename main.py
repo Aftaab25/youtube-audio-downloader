@@ -1,6 +1,6 @@
 # print("Hello World")
 
-import youtube_dl
+import yt_dlp as youtube_dl
 
 def get_mp3():
   video_info = youtube_dl.YoutubeDL().extract_info(
