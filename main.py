@@ -1,5 +1,3 @@
-# print("Hello World")
-
 import yt_dlp as youtube_dl
 
 global path
