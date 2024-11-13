@@ -15,7 +15,7 @@ def get_mp3():
     path = path_
           
   print("Selected Path: ", path)
-  print(video_info['title'])
+  # print(video_info['title'])
   file_rename = input(f"Rename File? {video_info['title']}: ")
   if (file_rename != ""):
     path = path + "/" + file_rename + ".mp3"
