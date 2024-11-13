@@ -8,16 +8,20 @@ def get_mp3():
 
 
   path = ""
-  path_ = input("Select Destination")
+  path_ = input("Select Destination: ")
   if path_=="":
     path = "~/Music"
   else:
     path = path_
           
-  options = {'format': 'bestaudio/best', 'keepvideo': False, 'outtmpl': path + f"/{video_info['title']}.mp3"}
-  print(path)
-  path = path + f"/{video_info['title']}.mp3"
-  print(path)
+  print("Selected Path: ", path)
+  print(video_info['title'])
+  file_rename = input(f"Rename File? {video_info['title']}: ")
+  if (file_rename != ""):
+    path = path + "/" + file_rename + ".mp3"
+  else: path = path + f"/{video_info['title']}.mp3"
+  options = {'format': 'bestaudio/best', 'keepvideo': False, 'outtmpl': path}
+  print("Final audio file path: ", path)
   with youtube_dl.YoutubeDL(options) as ydl:
       ydl.download([video_info['webpage_url']])
 
