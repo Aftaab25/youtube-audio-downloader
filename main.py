@@ -8,7 +8,7 @@ def get_mp3():
 
 
   path = ""
-  path_ = input("Select Destination: ")
+  path_ = input("Select Destination: ").strip()
   if path_=="":
     path = "~/Music"
   else:
